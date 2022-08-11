@@ -1,11 +1,11 @@
 Model Information:
-* title:	Sun
-* source:	https://sketchfab.com/3d-models/sun-9ef1c68fbb944147bcfcc891d3912645
-* author:	SebastianSosnowski (https://sketchfab.com/SebastianSosnowski)
+* title:	The Sun
+* source:	https://sketchfab.com/3d-models/the-sun-0d28aa65eb174d948c2716d73e8fd3bd
+* author:	kongle (https://sketchfab.com/minecraftnorge)
 
 Model License:
-* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
-* requirements:	Author must be credited. Commercial use is allowed.
+* license type:	CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
+* requirements:	Author must be credited. Modified versions must have the same license. Commercial use is allowed.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Sun" (https://sketchfab.com/3d-models/sun-9ef1c68fbb944147bcfcc891d3912645) by SebastianSosnowski (https://sketchfab.com/SebastianSosnowski) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+This work is based on "The Sun" (https://sketchfab.com/3d-models/the-sun-0d28aa65eb174d948c2716d73e8fd3bd) by kongle (https://sketchfab.com/minecraftnorge) licensed under CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)

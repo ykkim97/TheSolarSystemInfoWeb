@@ -60,20 +60,20 @@ const floorMesh = new THREE.Mesh(
 )
 floorMesh.rotation.x = - Math.PI / 2;
 floorMesh.receiveShadow = true;
-scene.add(floorMesh);
+// scene.add(floorMesh);
 
 const planets = [];
 planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Sun/Sun.gltf', x : -5, z : 20, height : 2 }));
 planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Mercury/Mercury.gltf', x : -7, z : 10, height : 2 }));
 planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Venus/Venus.gltf', x : -10, z : 0, height : 2 }));
-planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Earth/Earth.gltf', x : 10, z : -10, height : 2 }));
-planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/mars/Mars.gltf', x : -5, z : -20, height : 2 }));
-planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Moon/Moon.gltf', x : -17, z : 20, height : 2 }));
-planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Jupiter/Jupiter.gltf', x : -7, z : -12, height : 2 }));
-planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Saturn/saturn1.gltf', x : -19, z : 0, height : 2 }));
-planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Uranos/Uranus1.gltf', x : 15, z : -16, height : 2 }));
-planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Neptune/Neptune.gltf', x : 10, z : -20, height : 2 }));
-planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Pluto/Pluto.gltf', x : -17, z : -20, height : 2 }));
+planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Earth/Earth.gltf', x : 6, z : -10, height : 2 }));
+planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Moon/Moon.gltf', x : 7, z : -12, height : 2 }));
+planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/mars/Mars.gltf', x : 3, z : -20, height : 2 }));
+planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Jupiter/Jupiter.gltf', x : -7, z : -30, height : 2 }));
+planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Saturn/saturn1.gltf', x : -10, z : -45, height : 2 }));
+planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Uranos/Uranus.gltf', x : 5, z : -56, height : 2 }));
+planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Neptune/Neptune.gltf', x : 8, z : -67, height : 2 }));
+planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Pluto/Pluto.gltf', x : 3, z : -80, height : 2 }));
 
 console.log(planets)
 
@@ -96,7 +96,7 @@ function setSection() {
 		gsap.to(
 			camera.position,
 			{
-				duration : 1,
+				duration : 2,
 				x : planets[newSection].x,
 				z : planets[newSection].z + 5
 			}
