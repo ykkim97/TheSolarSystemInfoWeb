@@ -96,7 +96,7 @@ function setSection() {
 		gsap.to(
 			camera.position,
 			{
-				duration : 2,
+				duration : 1,
 				x : planets[newSection].x,
 				z : planets[newSection].z + 5
 			}

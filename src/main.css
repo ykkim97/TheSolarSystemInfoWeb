@@ -27,3 +27,8 @@ body {
 .section:nth-child(odd) {
 	text-align: right;
 }
+
+.section .content {
+	color: white;
+	font-size: 2vmin;
+}
