@@ -30,7 +30,7 @@ camera.position.set(-5, 2, 25);
 scene.add(camera);
 
 // // Controls
-// const controls = new OrbitControls(camera, renderer.domElement);
+const controls = new OrbitControls(camera, renderer.domElement);
 
 // Light
 const ambientLight = new THREE.AmbientLight('white', 0.5);
@@ -67,15 +67,13 @@ planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Sun/Sun.gltf', 
 planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Mercury/Mercury.gltf', x : -7, z : 10, height : 2 }));
 planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Venus/Venus.gltf', x : -10, z : 0, height : 2 }));
 planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Earth/Earth.gltf', x : 6, z : -10, height : 2 }));
-planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Moon/Moon.gltf', x : 7, z : -12, height : 2 }));
+planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Moon/Moon.gltf', x : 10, z : -12, height : 2 }));
 planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/mars/Mars.gltf', x : 3, z : -20, height : 2 }));
 planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Jupiter/Jupiter.gltf', x : -7, z : -30, height : 2 }));
 planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Saturn/saturn1.gltf', x : -10, z : -45, height : 2 }));
 planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Uranos/Uranus.gltf', x : 5, z : -56, height : 2 }));
 planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Neptune/Neptune.gltf', x : 8, z : -67, height : 2 }));
 planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Pluto/Pluto.gltf', x : 3, z : -80, height : 2 }));
-
-console.log(planets)
 
 // 그리기
 const clock = new THREE.Clock();
@@ -85,6 +83,7 @@ function draw() {
 
 	renderer.render(scene, camera);
 	renderer.setAnimationLoop(draw);
+
 }
 
 let currentSection = 0;
