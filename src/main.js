@@ -75,6 +75,26 @@ planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Uranos/Uranus.g
 planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Neptune/Neptune.gltf', x : 8, z : -67, height : 2 }));
 planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Pluto/Pluto.gltf', x : 3, z : -80, height : 2 }));
 
+// 랜덤한 파티클 효과
+const geometry = new THREE.BufferGeometry();
+const count = 120000;
+const positions = new Float32Array(count * 3);
+for (let i = 0; i < positions.length; i++) {
+	positions[i] = (Math.random() - 0.5) * 500;
+}
+geometry.setAttribute(
+	'position',
+	new THREE.BufferAttribute(positions, 3)
+);
+
+const pointsMaterial = new THREE.PointsMaterial({
+	size : 0.03,
+	color : 'plum'
+});
+const particles = new THREE.Points(geometry, pointsMaterial);
+scene.add(particles);
+
+
 // 그리기
 const clock = new THREE.Clock();
 
