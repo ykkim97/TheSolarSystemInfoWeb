@@ -38,6 +38,12 @@ body {
 	font-size: 2vmin;
 }
 
+.section .diameter {
+	color: yellow;
+	font-size: 2vmin;
+}
+
+
 /* @font-face {
 	font-family: 'Noto Sans CJK KR';
 	font-style: normal;

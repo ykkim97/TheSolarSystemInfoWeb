@@ -66,14 +66,14 @@ const planets = [];
 planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Sun/Sun.gltf', x : -5, z : 20, height : 2 }));
 planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Mercury/Mercury.gltf', x : -7, z : 10, height : 2 }));
 planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Venus/Venus.gltf', x : -10, z : 0, height : 2 }));
-planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Earth/Earth.gltf', x : 6, z : -10, height : 2 }));
-planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Moon/Moon.gltf', x : 10, z : -12, height : 2 }));
-planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/mars/Mars.gltf', x : 3, z : -20, height : 2 }));
-planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Jupiter/Jupiter.gltf', x : -7, z : -30, height : 2 }));
-planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Saturn/saturn1.gltf', x : -10, z : -45, height : 2 }));
-planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Uranos/Uranus.gltf', x : 5, z : -56, height : 2 }));
-planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Neptune/Neptune.gltf', x : 8, z : -67, height : 2 }));
-planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Pluto/Pluto.gltf', x : 3, z : -80, height : 2 }));
+planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Earth/Earth.gltf', x : 1, z : -15, height : 2 }));
+planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Moon/Moon.gltf', x : 10, z : -22, height : 2 }));
+planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/mars/Mars.gltf', x : 3, z : -45, height : 2 }));
+planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Jupiter/Jupiter.gltf', x : -7, z : -70, height : 2 }));
+planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Saturn/saturn1.gltf', x : -10, z : -115, height : 2 }));
+planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Uranos/Uranus.gltf', x : 5, z : -136, height : 2 }));
+planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Neptune/Neptune.gltf', x : 8, z : -167, height : 2 }));
+planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Pluto/Pluto.gltf', x : 3, z : -180, height : 2 }));
 
 // 랜덤한 파티클 효과
 const geometry = new THREE.BufferGeometry();
