@@ -30,7 +30,7 @@ camera.position.set(-5, 2, 25);
 scene.add(camera);
 
 // // Controls
-const controls = new OrbitControls(camera, renderer.domElement);
+// const controls = new OrbitControls(camera, renderer.domElement);
 
 // Light
 const ambientLight = new THREE.AmbientLight('white', 0.5);
@@ -77,7 +77,7 @@ planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Pluto/Pluto.glt
 
 // 랜덤한 파티클 효과
 const geometry = new THREE.BufferGeometry();
-const count = 120000;
+const count = 10000;
 const positions = new Float32Array(count * 3);
 for (let i = 0; i < positions.length; i++) {
 	positions[i] = (Math.random() - 0.5) * 500;
@@ -132,7 +132,50 @@ function setSize() {
 }
 
 // 이벤트
+
 window.addEventListener('scroll', setSection);
 window.addEventListener('resize', setSize);
+
+window.onload = function(){
+	const elm = document.querySelectorAll('.section');
+	const elmCount = elm.length;
+	elm.forEach(function(item, index){
+	item.addEventListener('mousewheel', function(event){
+		event.preventDefault();
+		let delta = 0;
+
+		if (!event) event = window.event;
+		if (event.wheelDelta) {
+			delta = event.wheelDelta / 120;
+			if (window.opera) delta = -delta;
+		} 
+		else if (event.detail) delta = -event.detail / 3;
+
+		let moveTop = window.scrollY;
+		let elmSelector = elm[index];
+
+		// wheel down : 다음 섹션으로 이동
+		if (delta < 0){
+			if (elmSelector !== elmCount-1){
+				try{
+					moveTop = window.pageYOffset + elmSelector.nextElementSibling.getBoundingClientRect().top;
+				}catch(e){}
+			}
+		}
+		
+		// wheel up : 이전 섹션으로 이동
+		else{
+			if (elmSelector !== 0){
+				try{
+				moveTop = window.pageYOffset + elmSelector.previousElementSibling.getBoundingClientRect().top;
+				}catch(e){}
+			}
+		}
+
+		const body = document.querySelector('html');
+		window.scrollTo({top:moveTop, left:0, behavior:'smooth'});
+		});
+	});
+}
 
 draw();

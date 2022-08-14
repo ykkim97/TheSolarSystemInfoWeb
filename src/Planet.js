@@ -16,11 +16,10 @@ export class Planet {
                 if (info.modelSrc === '/models/Sun/Sun.gltf') {
                     this.mesh.scale.set(1.7,1.7,1.7);
                     this.mesh.position.x = -7;
-                    this.mesh.position.y = 0.3;
+                    this.mesh.position.y = 0.5;
                 } else if (info.modelSrc === '/models/Mercury/Mercury.gltf') {
                     this.mesh.scale.set(0.003,0.003,0.003);
                     this.mesh.position.y = 1.5;
-                    this.mesh.position.x= -6.5;
                 } else if (info.modelSrc === '/models/Venus/Venus.gltf') {
                     this.mesh.scale.set(0.004,0.004,0.004);
                     this.mesh.position.y = 1.5;
