@@ -23,7 +23,7 @@ Three.js를 활용한 태양계 웹사이트 제작
 ## 구현 기능
 
 ### 스크롤 시 각 섹션으로 이동
-<img src="" />
+<img src="https://user-images.githubusercontent.com/17917009/184796320-1eeaa58b-0ae6-4b47-95ae-54d40c521e55.gif" />
 
 
 ## 부족한 기능 & 추가적으로 필요한 기능
