@@ -23,7 +23,7 @@ Three.js를 활용한 태양계 웹사이트 제작
 ## 구현 기능
 
 ### 스크롤 시 각 섹션으로 이동
-<img src="https://user-images.githubusercontent.com/17917009/184796320-1eeaa58b-0ae6-4b47-95ae-54d40c521e55.gif" width="1012" height="200" />
+<img src="https://user-images.githubusercontent.com/17917009/184796320-1eeaa58b-0ae6-4b47-95ae-54d40c521e55.gif" width="1012" height="600" />
 
 - 마우스 스크롤 시 각 행성 좌표를 향해서 이동하도록 하였습니다.
 - 한번 스크롤 할때마다 한번씩 이동합니다.
