@@ -1,4 +1,3 @@
-import gsap from "gsap";
 export class Planet {
     constructor(info) {
         this.x = info.x;
@@ -49,16 +48,6 @@ export class Planet {
                     this.mesh.position.y = 1.5;
                 }
 
-                // gsap.to(
-                //     this.mesh.rotation,
-                //     {
-                //         duration : 1,
-                //         repeat : -1,
-                //         z : Math.PI
-                //     }
-                // )
-
-                // else this.mesh.scale.set(0.007,0.007,0.007);
                 info.scene.add(this.mesh);
             }
         )

@@ -1,7 +1,6 @@
 import * as THREE from 'three';
 import { Planet } from "./Planet";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import gsap from 'gsap';
 
 // Renderer
@@ -17,7 +16,6 @@ renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
 // Scene
 const scene = new THREE.Scene();
-// scene.background = new THREE.Color('white'); 
 
 // Camera
 const camera = new THREE.PerspectiveCamera(
@@ -29,17 +27,9 @@ const camera = new THREE.PerspectiveCamera(
 camera.position.set(-5, 2, 25);
 scene.add(camera);
 
-// // Controls
-// const controls = new OrbitControls(camera, renderer.domElement);
-
 // Light
 const ambientLight = new THREE.AmbientLight('white', 0.5);
 scene.add(ambientLight);
-
-// const directionalLight = new THREE.DirectionalLight('white', 1);
-// directionalLight.position.x = 1;
-// directionalLight.position.z = 2;
-// scene.add(directionalLight);
 
 const spotLight = new THREE.SpotLight('white', 0.7);
 spotLight.position.set(0, 150, 100);
@@ -53,15 +43,7 @@ scene.add(spotLight);
 // gltfLoader
 const gltfLoader = new GLTFLoader();
 
-// Mesh
-const floorMesh = new THREE.Mesh(
-	new THREE.PlaneGeometry(100,100),
-	new THREE.MeshStandardMaterial({color : 'black'})
-)
-floorMesh.rotation.x = - Math.PI / 2;
-floorMesh.receiveShadow = true;
-// scene.add(floorMesh);
-
+// 행성 Mesh 추가
 const planets = [];
 planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Sun/Sun.gltf', x : -5, z : 20, height : 2 }));
 planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Mercury/Mercury.gltf', x : -7, z : 10, height : 2 }));
@@ -75,7 +57,7 @@ planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Uranos/Uranus.g
 planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Neptune/Neptune.gltf', x : 8, z : -167, height : 2 }));
 planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Pluto/Pluto.gltf', x : 3, z : -180, height : 2 }));
 
-// 랜덤한 파티클 효과
+// 랜덤 위치의 별 추가(배경)
 const geometry = new THREE.BufferGeometry();
 const count = 10000;
 const positions = new Float32Array(count * 3);
@@ -111,7 +93,6 @@ function setSection() {
 	const newSection = Math.round(window.scrollY / window.innerHeight);
 
 	if (currentSection !== newSection) {
-		console.log('setSection ')
 		gsap.to(
 			camera.position,
 			{
