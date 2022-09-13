@@ -57,7 +57,7 @@ planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Uranos/Uranus.g
 planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Neptune/Neptune.gltf', x : 8, z : -167, height : 2 }));
 planets.push(new Planet({ scene, gltfLoader, modelSrc : '/models/Pluto/Pluto.gltf', x : 3, z : -180, height : 2 }));
 
-// 랜덤 위치의 별 추가(배경)
+// 랜덤 위치의 별 추가(우주 배경)
 const geometry = new THREE.BufferGeometry();
 const count = 10000;
 const positions = new Float32Array(count * 3);

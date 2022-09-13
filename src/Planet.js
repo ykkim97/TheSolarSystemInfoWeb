@@ -12,6 +12,7 @@ export class Planet {
                 this.mesh.castShadow = true;
                 this.mesh.position.set(this.x, this.height/2, this.z);
                 
+                // 각 행성에 따른 mesh의 크기, 위치값 조정
                 if (info.modelSrc === '/models/Sun/Sun.gltf') {
                     this.mesh.scale.set(1.9,1.9,1.9);
                     this.mesh.position.x = -7;

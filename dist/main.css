@@ -1,0 +1,44 @@
+body {
+	margin: 0;
+	font-family: 'Noto Sans CJK KR';
+}
+
+#three-canvas {
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+
+.sections {
+	position: relative;
+	z-index: 1;
+}
+
+.section {
+	box-sizing: border-box;
+	padding: 5rem;
+	height: 100vh;
+}
+
+.section h2 {
+	margin: 0;
+	font-size: 10vmin;
+	color: white;
+}
+
+.section:nth-child(odd) {
+	text-align: right;
+}
+
+.section .content {
+	color: white;
+	font-size: 2vmin;
+}
+
+.section .diameter {
+	color: yellow;
+	font-size: 2vmin;
+}
+
+
+
