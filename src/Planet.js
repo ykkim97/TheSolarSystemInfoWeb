@@ -35,7 +35,7 @@ export class Planet {
                     this.mesh.scale.set(0.03,0.03,0.03);
                     this.mesh.position.y = 2;
                 } else if (info.modelSrc === '/models/Saturn/saturn1.gltf') {
-                    this.mesh.scale.set(0.022,0.022,0.022);
+                    this.mesh.scale.set(0.020,0.020,0.020);
                     this.mesh.position.y = 1.5;
                 } else if (info.modelSrc === '/models/Uranos/Uranus.gltf') {
                     this.mesh.scale.set(0.021,0.021,0.021);

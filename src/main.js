@@ -9,7 +9,7 @@ const renderer = new THREE.WebGLRenderer({
 	canvas,
 	antialias: true
 });
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(window.innerWidth-100, window.innerHeight-100);
 renderer.setPixelRatio(window.devicePixelRatio > 1 ? 2 : 1);
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -108,7 +108,7 @@ function setSection() {
 function setSize() {
 	camera.aspect = window.innerWidth / window.innerHeight;
 	camera.updateProjectionMatrix();
-	renderer.setSize(window.innerWidth, window.innerHeight);
+	renderer.setSize(window.innerWidth-100, window.innerHeight-100);
 	renderer.render(scene, camera);
 }
 
