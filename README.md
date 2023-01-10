@@ -15,7 +15,7 @@ Three.js를 활용한 태양계 웹사이트
 
 - HTML
 - CSS
-- Javascript
+- Javacript
 - Three.js
 - gsap
 - Webpack
